@@ -84,24 +84,36 @@
     <main class="pt-20"> <!-- Adjust padding-top to account for the fixed navbar -->
 
         <!-- Home Section -->
-        <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center section-padding bg-darkBg">
-            <img src="https://drive.google.com/uc?export=view&id=1h_1c5BPxxPYlA8eQli1YpYpoCuQWEMNr" alt="Pratik's Profile" class="rounded-full w-40 h-40 mb-6 border-4 border-primary shadow-lg">
-            <h1 class="text-5xl md:text-7xl font-extrabold mb-4 text-darkText">Pratik Gadhe</h1>
-            <p class="text-xl md:text-3xl text-secondary font-semibold mb-8">Building myself, one line of code at a time.</p>
-            <a href="#projects" class="px-8 py-3 bg-primary text-white font-bold rounded-full text-lg hover:bg-secondary hover:text-darkBg transition-all duration-300 shadow-lg">View My Work</a>
+        <!-- Home Section -->
+        <section id="home" class="min-h-screen flex items-center justify-center section-padding bg-darkBg">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center md:items-start text-center md:text-left gap-10">
+            
+            <!-- Profile Image -->
+            <div class="flex-shrink-0">
+            <img src="https://drive.google.com/uc?export=view&id=1h_1c5BPxxPYlA8eQli1YpYpoCuQWEMNr" 
+                alt="Pratik's Profile" 
+                class="rounded-full w-40 h-40 md:w-56 md:h-56 border-4 border-primary shadow-lg mx-auto md:mx-0">
+            </div>
+            
+            <!-- Profile Details -->
+            <div>
+            <h1 class="text-5xl md:text-6xl font-extrabold mb-4 text-darkText">Pratik Gadhe</h1>
+            <p class="text-xl md:text-2xl text-secondary font-semibold mb-6">
+                Building myself, one line of code at a time.
+            </p>
+            <p class="text-gray-400 text-lg leading-relaxed mb-6 max-w-xl">
+                I'm a passionate aspiring developer, focused on building impactful solutions through code.
+                Always curious, always learning — this portfolio is my journey of growth and consistency.
+            </p>
+            <a href="#projects" 
+                class="px-8 py-3 bg-primary text-white font-bold rounded-full text-lg hover:bg-secondary hover:text-darkBg transition-all duration-300 shadow-lg">
+                View My Work
+            </a>
+            </div>
+            
+        </div>
         </section>
 
-        <!-- About Section -->
-        <section id="about" class="section-padding bg-darkCard text-darkText">
-            <div class="container mx-auto px-6 max-w-3xl">
-                <h2 class="text-4xl font-bold text-center mb-12 text-primary">About Me</h2>
-                <div class="space-y-6 text-lg leading-relaxed">
-                    <p>Hello! I'm Pratik, a passionate aspiring developer on a journey to build impactful solutions through code. My academic background has provided me with a strong foundation in <span class="text-secondary">Computer Engineering</span>, and I'm constantly seeking to expand my knowledge and skill set in the realm of software development.</p>
-                    <p>I thrive on learning new technologies, tackling complex problems, and contributing to projects that make a difference. My interests lie in <span class="text-secondary">Web Development, Data Science , AI</span>, and I'm always eager to collaborate and innovate.</p>
-                    <p>This "CodeTrail" website is a testament to my commitment to continuous growth and an evolving showcase of my learning and development journey. I believe in consistent effort, and every line of code brings me closer to my goals.</p>
-                </div>
-            </div>
-        </section>
 
         <!-- ===== Projects Section ===== -->
         <section id="projects" class="section-padding bg-darkCard text-darkText">
