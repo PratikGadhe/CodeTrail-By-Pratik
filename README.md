@@ -1,29 +1,38 @@
-# CodeTrail-By-Pratik
-🌐 Personal Portfolio Website
-Welcome to my personal portfolio website! 🚀
-This website showcases my achievements, projects, skills, and resume in a professional and attractive way.
+# 🌐 Personal Portfolio Website
 
-✨ Features
-🏆 Achievements Section – Highlights my key accomplishments.
-💻 Coding Section – Displays my repositories with links to GitHub.
-📄 Resume Section – Direct access to download/view my resume.
-📬 Contact Section – Easy way to reach out via email or social profiles.
-🎨 Modern UI – Simple, clean, and responsive design.
+A simple, responsive personal portfolio website built using **HTML** and **CSS**.  
+It showcases my projects, skills, and contact information in a clean and modern design.
 
-🔗 Live Demo
-👉 https://pratikgadhe.github.io/CodeTrail-By-Pratik/
+---
 
-🛠️ Built With
-  HTML5
-  CSS3
-  Tailwind
+## ✨ Features
+- Responsive design for all devices  
+- About section to introduce myself  
+- Projects section with highlights  
+- Contact section with details and form  
+- Clean and modern UI  
 
-📂 Repository Structure
-├── index.html   # Main portfolio page    
-├── assets/      # Images, resume, etc.  
-└── README.md    # Project documentation  
+---
 
-📬 Contact
-LinkedIn: https://www.linkedin.com/in/pratik-gadhe-8638b7324/
-GitHub: https://github.com/PratikGadhe
-Email: pratikgadhe366@gmail.com
+## 🛠️ Technologies Used
+- **HTML5**  
+- **CSS3**
+
+---
+
+## 📸 Preview
+(Add a screenshot of your website here later using:)  
+`![Portfolio Preview](screenshot.png)`
+
+---
+
+## 🚀 Live Demo
+(If deployed, add link here:)  
+👉 [Live Website](https://your-link-here.com)
+
+---
+
+## 📬 Contact
+If you want to connect with me:  
+- 📧 Email: yourname@email.com  
+- 🔗 LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)  
