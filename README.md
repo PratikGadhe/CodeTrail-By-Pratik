@@ -16,16 +16,16 @@ It showcases my projects, skills, and contact information in a clean and modern 
 ## 🛠️ Technologies Used
 - **HTML5**  
 - **CSS3**
-- 
+- **Tailwind**
 ---
 
 ## 🚀 Live Demo
-(If deployed, add link here:)  
-👉 [Live Website](https://your-link-here.com)](https://pratikgadhe.github.io/CodeTrail-By-Pratik/)
+
+👉 https://pratikgadhe.github.io/CodeTrail-By-Pratik/
 
 ---
 
 ## 📬 Contact
 If you want to connect with me:  
 - 📧 Email: pratikgadhe366@gmail.com  
-- 🔗 LinkedIn:(https://www.linkedin.com/in/pratik-gadhe-8638b7324/) 
+- 🔗 LinkedIn: https://www.linkedin.com/in/pratik-gadhe-8638b7324/ 
