@@ -49,7 +49,9 @@
     <!-- Navbar -->
     <nav class="fixed w-full z-50 bg-darkBg bg-opacity-90 backdrop-blur-sm shadow-md">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#home" class="text-2xl font-bold text-primary hover:text-secondary transition-colors duration-300">CodeTrail By Pratik</a>
+            <a href="#" class="text-4xl font-bold text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.9)]">
+                CodeTrail By Pratik
+            </a>
             <!-- Desktop Nav -->
             <div class="hidden md:flex space-x-8">
                 <a href="#home" class="text-lg font-medium hover:text-secondary transition-colors duration-300">Home</a>
@@ -87,70 +89,105 @@
         <section id="home" class="min-h-screen flex items-center justify-center section-padding bg-darkBg">
         <div class="container mx-auto px-6 flex flex-col md:flex-row items-center md:items-start text-center md:text-left gap-10">
             
-            <!-- Profile Image -->
+            <!-- Profile Image
             <div class="flex-shrink-0">
-            <img src="https://drive.google.com/uc?export=view&id=1h_1c5BPxxPYlA8eQli1YpYpoCuQWEMNr" 
+                <img src="IMG_20240212_100545_420.jpg" 
                 alt="Pratik's Profile" 
-                class="rounded-full w-40 h-40 md:w-56 md:h-56 border-4 border-primary shadow-lg mx-auto md:mx-0">
+                class="rounded-full w-96 h-96 md:w-100 md:h-100 border-4 border-primary shadow-lg mx-auto md:mx-0 md:mt-[-40px]">
+            </div> -->
+            <div class="flex items-center md:items-start md:space-x-8">
+            <!-- Profile Image -->
+            <div class="flex-shrink-0 relative">
+                <img src="WhatsApp Image 2025-01-27 at 12.49.10.jpeg" 
+                    alt="Pratik's Profile" 
+                    class="rounded-full w-72 h-72 md:w-96 md:h-96 border-4 border-primary shadow-[0_0_60px_rgba(255,255,255,0.9)] mx-auto md:mx-0">
             </div>
-            
+
+
+
             <!-- Profile Details -->
-            <div>
-            <h1 class="text-5xl md:text-6xl font-extrabold mb-4 text-darkText">Pratik Gadhe</h1>
-            <p class="text-xl md:text-2xl text-secondary font-semibold mb-6">
-                Building myself, one line of code at a time.
-            </p>
-            <p class="text-gray-400 text-lg leading-relaxed mb-6 max-w-xl">
-                I’m a passionate first-year student exploring AI/ML and programming.  
-                My journey started with C and Python, and I’m constantly learning new  
-                technologies to build impactful projects. I believe in creating solutions  
-                that make everyday life easier and more efficient.
-            </p>
-            <a href="#projects" 
-                class="px-8 py-3 bg-primary text-white font-bold rounded-full text-lg hover:bg-secondary hover:text-darkBg transition-all duration-300 shadow-lg">
-                View My Work
-            </a>
+            <div class="mt-6 md:mt-0 md:ml-48 text-center md:text-left max-w-3xl">
+                <h1 class="text-4xl md:text-5xl font-bold text-white">Pratik Gadhe</h1>
+                <p class="mt-2 text-lg text-yellow-400 font-semibold">
+                    Building myself, one line of code at a time.
+
+                </p>
+
+                <p>
+
+                    I am a Computer Engineering student at <strong>SVKM’s Institute of Technology, Dhule</strong>, 
+                    with a strong interest in <strong>Data Science, Machine Learning, and Artificial Intelligence</strong>. 
+                    Passionate about exploring the latest AI tools and technologies, I enjoy applying my knowledge 
+                    to solve real-world problems and create impactful solutions.
+
+                </p>
+                <p>
+                    I have gained hands-on experience in programming languages such as 
+                    <strong>C, Python, and Java</strong>, and continue to enhance my skills in software development 
+                    and AI-driven applications. My current focus is on building a solid foundation in 
+                    <strong>Data Science and Machine Learning</strong>, while staying curious about new technologies 
+                    shaping the future.
+                </p>
+                <p>
+                    With a mindset of continuous learning and innovation, I aim to contribute meaningfully 
+                    to the tech industry and grow as a professional in the field of AI/ML.
+                </p>
+                <a href="#projects" 
+                    class="mt-6 inline-block bg-blue-600 hover:bg-yellow-500 text-black font-medium py-3 px-6 rounded-full transition">
+                        View My Work
+                </a>
             </div>
-            
-        </div>
+
+
         </section>
 
 
         <!-- ===== Projects Section ===== -->
+        <!-- Projects Section -->
         <section id="projects" class="section-padding bg-darkCard text-darkText">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-12">🚀 Projects</h2>
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 text-white">🚀 PROJECTS</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
 
-            <div class="grid md:grid-cols-3 gap-8">
-            
-            <!-- Project 1 -->
-            <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition">
-                <h3 class="text-2xl font-semibold mb-2">AI Learning Platform</h3>
-                <p class="text-gray-600 mb-4">
+            <!-- Project Card 1 -->
+            <div class="bg-darkBg p-8 rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 border-l-4 border-secondary">
+                <div class="flex items-center mb-4">
+                <span class="text-4xl text-secondary mr-4">🤖</span>
+                <h3 class="text-2xl font-semibold">AI Learning Platform</h3>
+                </div>
+                <p class="text-gray-400">
                 A personalized AI-based teaching platform with interactive lessons, 
                 visual + audio integration, and adaptive learning paths.
                 </p>
-                <a href="#" class="text-gray-400 cursor-not-allowed" onclick="return false;">Coming Soon</a>
+                <a href="#" class="text-gray-500 italic cursor-not-allowed mt-4 inline-block">Coming Soon</a>
             </div>
 
-            <!-- Project 2 -->
-            <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition">
-                <h3 class="text-2xl font-semibold mb-2">Smart Recycling Machine</h3>
-                <p class="text-gray-600 mb-4">
+            <!-- Project Card 2 -->
+            <div class="bg-darkBg p-8 rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 border-l-4 border-secondary">
+                <div class="flex items-center mb-4">
+                <span class="text-4xl text-secondary mr-4">♻️</span>
+                <h3 class="text-2xl font-semibold">Smart Recycling Machine</h3>
+                </div>
+                <p class="text-gray-400">
                 A prototype machine that scans plastic bottles, crushes them, 
                 and rewards users with cashback incentives.
                 </p>
-                <a href="https://github.com/PratikGadhe/Major-Project-" class="text-blue-600 hover:underline">View Project →</a>
+                <a href="https://github.com/PratikGadhe/Major-Project-" 
+                class="text-blue-400 hover:underline mt-4 inline-block">View Project →</a>
             </div>
 
-            <!-- Project 3 -->
-            <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition">
-                <h3 class="text-2xl font-semibold mb-2">Portfolio Website</h3>
-                <p class="text-gray-600 mb-4">
+            <!-- Project Card 3 -->
+            <div class="bg-darkBg p-8 rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 border-l-4 border-secondary">
+                <div class="flex items-center mb-4">
+                <span class="text-4xl text-secondary mr-4">💻</span>
+                <h3 class="text-2xl font-semibold">Portfolio Website</h3>
+                </div>
+                <p class="text-gray-400">
                 A modern personal portfolio built with HTML, CSS, Tailwind, 
                 and JavaScript for showcasing projects and skills.
                 </p>
-                <a href="#" class="text-gray-400 cursor-not-allowed" onclick="return false;">Coming Soon</a>
+                <a href="https://github.com/PratikGadhe/CodeTrail-By-Pratik" 
+                class="text-blue-400 hover:underline mt-4 inline-block">View Project →</a>
             </div>
 
             </div>
@@ -160,36 +197,57 @@
 
 
         <!-- Achievements Section -->
+        <!-- Achievements Section -->
         <section id="achievements" class="section-padding bg-darkCard text-darkText">
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-12 text-primary">Achievements</h2>
+            <h2 class="text-4xl font-bold text-center mb-12 text-white">🏆 ACHIEVEMENTS</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-            
-            <!-- Achievement Card 1 -->
+
+            <!-- Achievement 1 -->
             <div class="bg-darkBg p-8 rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 border-l-4 border-secondary">
                 <div class="flex items-center mb-4">
-                <span class="text-4xl text-secondary mr-4">🏆</span>
-                <h3 class="text-2xl font-semibold">Hackathon Finalist</h3>
+                <span class="text-4xl text-secondary mr-4">🥇</span>
+                <h3 class="text-2xl font-semibold">Poster Presentation Winner</h3>
                 </div>
-                <p class="text-gray-400">Secured a spot as a finalist in <strong>Ideahackathon 2024</strong> for developing an innovative AI-based teaching platform.</p>
+                <p class="text-gray-400 mb-4">
+                Secured <strong>1st Position</strong> in Poster Presentation at the International Conference on Applied Science and Humanities (2024).  
+                Earned ₹3000 cash prize + Certificate.
+                </p>
+                <div class="flex gap-4">
+                <a href="icash.jpeg" class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-blue-700 transition">View Certificate</a>
+                <a href="https://www.linkedin.com/posts/pratik-gadhe-8638b7324_researchinnovation-posterpresentation-svkm-activity-7311095188196577282-9Hp_?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFIAzwsBpD2G5HRC0pxVf_Pf7x24gy-ie2s" class="px-4 py-2 bg-secondary text-white rounded-lg hover:bg-yellow-600 transition">View Image</a>
+                </div>
             </div>
-            
-            <!-- Achievement Card 2 -->
+
+            <!-- Achievement 2 -->
             <div class="bg-darkBg p-8 rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 border-l-4 border-secondary">
                 <div class="flex items-center mb-4">
-                <span class="text-4xl text-secondary mr-4">🎓</span>
-                <h3 class="text-2xl font-semibold">Academic Excellence</h3>
+                <span class="text-4xl text-secondary mr-4">🥈</span>
+                <h3 class="text-2xl font-semibold">TechnoCave 2025 Runner-Up</h3>
                 </div>
-                <p class="text-gray-400">Achieved <strong>Distinction</strong> in first-year Computer Science, excelling in Programming and Mathematics.</p>
+                <p class="text-gray-400 mb-4">
+                Team <strong>EcoWorrier</strong> secured <strong>Runner-Up</strong> in the National-Level Mega Computing Event TechnoCave 2025, hosted at SVKM’s IOT.
+                </p>
+                <div class="flex gap-4">
+                <a href="Avishkar_Runnerup_Pratik_Gadhe.png" class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-blue-700 transition">View Certificate</a>
+                <a href="https://www.linkedin.com/posts/pratik-gadhe-8638b7324_technocave2025-nationallevelcompetition-runnerup-activity-7330313908387307520-5TS5?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFIAzwsBpD2G5HRC0pxVf_Pf7x24gy-ie2s" class="px-4 py-2 bg-secondary text-white rounded-lg hover:bg-yellow-600 transition">View Image</a>
+                </div>
             </div>
-            
-            <!-- Achievement Card 3 -->
+
+            <!-- Achievement 3 -->
             <div class="bg-darkBg p-8 rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 border-l-4 border-secondary">
                 <div class="flex items-center mb-4">
-                <span class="text-4xl text-secondary mr-4">🌟</span>
-                <h3 class="text-2xl font-semibold">Community Contribution</h3>
+                <span class="text-4xl text-secondary mr-4">🎖️</span>
+                <h3 class="text-2xl font-semibold">Techverse 2025 - Silver Medal</h3>
                 </div>
-                <p class="text-gray-400">Contributed to <strong>open-source projects</strong> and actively participated in community initiatives promoting tech learning.</p>
+                <p class="text-gray-400 mb-4">
+                Won <strong>2nd Position</strong> in Model Presentation at <strong>Techverse 2025</strong>.  
+                Project: “Incentivized Plastic Recycling Machine”. Awarded Silver Medal, Certificate & ₹3000.
+                </p>
+                <div class="flex gap-4">
+                <a href="TechVerse Runner-Up 2025.pdf" class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-blue-700 transition">View Certificate</a>
+                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7333487444815749123/" class="px-4 py-2 bg-secondary text-white rounded-lg hover:bg-yellow-600 transition">View Image</a>
+                </div>
             </div>
 
             </div>
@@ -197,48 +255,58 @@
         </section>
 
 
+
         <!-- Coding Progress Section (Simple MVP Streak Display) -->
+        <!-- Coding Section -->
         <section id="coding" class="section-padding bg-darkBg text-darkText">
-            <div class="container mx-auto px-6 max-w-4xl">
-                <h2 class="text-4xl font-bold text-center mb-12 text-primary">My Coding Trail</h2>
-                <p class="text-lg text-center mb-8 text-gray-400">A visual representation of my consistent daily coding progress.</p>
-                <div class="flex flex-wrap justify-center gap-1 p-4 bg-darkCard rounded-lg shadow-xl">
-                    <!-- Placeholder for a simple streak display (Example for 30 days) -->
-                    <!-- Darker green = more activity, lighter green = less activity -->
-                    <div class="w-6 h-6 bg-green-800 rounded-sm" title="Day 1: 3 Commits"></div>
-                    <div class="w-6 h-6 bg-green-700 rounded-sm" title="Day 2: LeetCode Problem"></div>
-                    <div class="w-6 h-6 bg-green-600 rounded-sm" title="Day 3: 1 Commit"></div>
-                    <div class="w-6 h-6 bg-green-800 rounded-sm" title="Day 4: Project Work"></div>
-                    <div class="w-6 h-6 bg-green-700 rounded-sm" title="Day 5: 2 Commits"></div>
-                    <div class="w-6 h-6 bg-green-500 rounded-sm" title="Day 6: Study Session"></div>
-                    <div class="w-6 h-6 bg-green-800 rounded-sm" title="Day 7: New Feature"></div>
-                    <div class="w-6 h-6 bg-green-700 rounded-sm" title="Day 8: Bug Fix"></div>
-                    <div class="w-6 h-6 bg-green-600 rounded-sm" title="Day 9: 1 Commit"></div>
-                    <div class="w-6 h-6 bg-green-800 rounded-sm" title="Day 10: Learning CSS"></div>
-                    <div class="w-6 h-6 bg-green-700 rounded-sm" title="Day 11: 3 Commits"></div>
-                    <div class="w-6 h-6 bg-green-500 rounded-sm" title="Day 12: Read Docs"></div>
-                    <div class="w-6 h-6 bg-green-800 rounded-sm" title="Day 13: Project Refactor"></div>
-                    <div class="w-6 h-6 bg-green-700 rounded-sm" title="Day 14: Algorithms"></div>
-                    <div class="w-6 h-6 bg-green-600 rounded-sm" title="Day 15: 1 Commit"></div>
-                    <div class="w-6 h-6 bg-green-800 rounded-sm" title="Day 16: New Framework"></div>
-                    <div class="w-6 h-6 bg-green-700 rounded-sm" title="Day 17: Database Design"></div>
-                    <div class="w-6 h-6 bg-green-500 rounded-sm" title="Day 18: Research"></div>
-                    <div class="w-6 h-6 bg-green-800 rounded-sm" title="Day 19: Testing"></div>
-                    <div class="w-6 h-6 bg-green-700 rounded-sm" title="Day 20: Deploy Update"></div>
-                    <div class="w-6 h-6 bg-green-600 rounded-sm" title="Day 21: 2 Commits"></div>
-                    <div class="w-6 h-6 bg-green-800 rounded-sm" title="Day 22: UI/UX Study"></div>
-                    <div class="w-6 h-6 bg-green-700 rounded-sm" title="Day 23: Code Review"></div>
-                    <div class="w-6 h-6 bg-green-500 rounded-sm" title="Day 24: Planning"></div>
-                    <div class="w-6 h-6 bg-green-800 rounded-sm" title="Day 25: Feature Complete"></div>
-                    <div class="w-6 h-6 bg-green-700 rounded-sm" title="Day 26: Learning Python"></div>
-                    <div class="w-6 h-6 bg-green-600 rounded-sm" title="Day 27: Solved a Bug"></div>
-                    <div class="w-6 h-6 bg-green-800 rounded-sm" title="Day 28: Code Challenge"></div>
-                    <div class="w-6 h-6 bg-green-700 rounded-sm" title="Day 29: Documentation"></div>
-                    <div class="w-6 h-6 bg-green-500 rounded-sm" title="Day 30: Weekend Project"></div>
-                </div>
-                <p class="text-sm text-center mt-4 text-gray-500">More intense green = more activity on that day.</p>
-            </div>
+        <div class="container mx-auto px-6 max-w-5xl">
+            
+            <!-- Title -->
+            <h2 class="text-4xl font-bold text-center mb-12 text-white">💻 My Coding Trail</h2>
+            <p class="text-lg text-center mb-8 text-gray-400">Inspired by GitHub – My repositories and coding streaks.</p>
+
+            <!-- Repositories Section -->
+            <div class="grid md:grid-cols-2 gap-6 mb-12">
+            
+            <!-- Repo Card -->
+            <a href="https://github.com/PratikGadhe/C-Langauge-2025" target="_blank"
+                class="bg-darkCard p-6 rounded-lg shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 block">
+                <h3 class="text-xl font-semibold text-white">📂 C-Language-2025</h3>
+                <p class="text-gray-400 mt-2">Completely based on C Programming Language with logical questions & solutions.</p>
+                <span class="inline-block mt-3 px-3 py-1 text-sm bg-green-600 rounded-full">C</span>
+            </a>
+
+            <a href="https://github.com/PratikGadhe/Major-Project-RVM-Machine-Code" target="_blank"
+                class="bg-darkCard p-6 rounded-lg shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 block">
+                <h3 class="text-xl font-semibold text-white">📂 Major-Project-RVM-Machine-Code</h3>
+                <p class="text-gray-400 mt-2">Smart recycling system using Python, Tkinter, OpenCV, and SQLite.</p>
+                <span class="inline-block mt-3 px-3 py-1 text-sm bg-blue-600 rounded-full">Python</span>
+            </a>
+
+            <a href="https://github.com/PratikGadhe/Python-Programming-2025" target="_blank"
+                class="bg-darkCard p-6 rounded-lg shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 block">
+                <h3 class="text-xl font-semibold text-white">📂 Python-Programming-2025</h3>
+                <p class="text-gray-400 mt-2">Collection of Python programs & problem-solving exercises.</p>
+                <span class="inline-block mt-3 px-3 py-1 text-sm bg-blue-500 rounded-full">Python</span>
+            </a>
+
+            <a href="https://github.com/PratikGadhe/Java-Programming-2025" target="_blank"
+                class="bg-darkCard p-6 rounded-lg shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 block">
+                <h3 class="text-xl font-semibold text-white">📂 Java-Programming-2025</h3>
+                <p class="text-gray-400 mt-2">Java programs covering core concepts & problem-solving techniques.</p>
+                <span class="inline-block mt-3 px-3 py-1 text-sm bg-red-600 rounded-full">Java</span>
+            </a>
+
+            <a href="https://github.com/PratikGadhe/CodeTrail-By-Pratik" target="_blank"
+                class="bg-darkCard p-6 rounded-lg shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 block">
+                <h3 class="text-xl font-semibold text-white">📂 CodeTrail-By-Pratik</h3>
+                <p class="text-gray-400 mt-2">My personal portfolio website showcasing projects & achievements.</p>
+                <span class="inline-block mt-3 px-3 py-1 text-sm bg-orange-500 rounded-full">HTML</span>
+            </a>
+
+        </div>
         </section>
+
 
         <!-- Contact Section (Footer) -->
         <footer id="contact" class="bg-darkCard text-darkText py-12">
