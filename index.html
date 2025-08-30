@@ -1,36 +1,52 @@
 <!DOCTYPE html>
-<html lang="en" class="dark"> <!-- Default to dark mode as requested -->
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CodeTrail by Pratik</title>
+    <title>Pratik Gadhe - AI/ML Engineer | Computer Engineering Student</title>
+    <meta name="description" content="Pratik Gadhe - Computer Engineering student specializing in AI/ML and Data Science. Passionate about creating innovative solutions with Python, Java, and C programming.">
+    <meta name="keywords" content="Pratik Gadhe, AI Engineer, Machine Learning, Data Science, Computer Engineering, Python Developer, Portfolio">
+    <meta name="author" content="Pratik Gadhe">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Pratik Gadhe - AI/ML Engineer Portfolio">
+    <meta property="og:description" content="Computer Engineering student specializing in AI/ML and Data Science. View my projects, achievements, and coding journey.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pratikgadhe.github.io/CodeTrail-By-Pratik/">
+    <meta property="og:image" content="https://pratikgadhe.github.io/CodeTrail-By-Pratik/WhatsApp%20Image%202025-01-27%20at%2012.49.10.jpeg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pratik Gadhe - AI/ML Engineer Portfolio">
+    <meta name="twitter:description" content="Computer Engineering student specializing in AI/ML and Data Science">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"> </script>
     <script>
-        // Custom Tailwind CSS configuration for your specific colors
         tailwind.config = {
-            darkMode: 'class', // Enables dark mode based on 'dark' class on HTML
+            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
-                        primary: '#2563EB', // Your custom Blue
-                        secondary: '#FACC15', // Your custom Yellow
-                        darkBg: '#111827',   // A deep dark gray for general background
-                        darkCard: '#1F2937', // A slightly lighter dark gray for cards
-                        darkText: '#E5E7EB', // Light gray for text in dark mode
+                        primary: '#2563EB',
+                        secondary: '#FACC15',
+                        darkBg: '#111827',
+                        darkCard: '#1F2937',
+                        darkText: '#E5E7EB',
                     }
                 }
             }
         }
     </script>
     <style>
-        /* Basic styles for HTML and section spacing - can be moved to a CSS file if needed */
         html.dark {
-            background-color: #111827; /* darkBg */
-            color: #E5E7EB; /* darkText */
+            background-color: #111827;
+            color: #E5E7EB;
         }
         body {
-            font-family: 'Inter', sans-serif; /* Using a common sans-serif font, can be updated */
+            font-family: 'Inter', sans-serif;
         }
         .section-padding {
             padding-top: 6rem;
@@ -41,6 +57,25 @@
                 padding-top: 4rem;
                 padding-bottom: 4rem;
             }
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1F2937;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2563EB;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #FACC15;
+        }
+        .photo-editor-modal {
+            display: none;
         }
     </style>
 </head>
@@ -53,11 +88,13 @@
                 CodeTrail By Pratik
             </a>
             <!-- Desktop Nav -->
-            <div class="hidden md:flex space-x-8">
+            <div class="hidden md:flex space-x-6">
                 <a href="#home" class="text-lg font-medium hover:text-secondary transition-colors duration-300">Home</a>
                 <a href="#about" class="text-lg font-medium hover:text-secondary transition-colors duration-300">About</a>
+                <a href="#skills" class="text-lg font-medium hover:text-secondary transition-colors duration-300">Skills</a>
                 <a href="#projects" class="text-lg font-medium hover:text-secondary transition-colors duration-300">Projects</a>
                 <a href="#achievements" class="text-lg font-medium hover:text-secondary transition-colors duration-300">Achievements</a>
+                <a href="#education" class="text-lg font-medium hover:text-secondary transition-colors duration-300">Education</a>
                 <a href="#coding" class="text-lg font-medium hover:text-secondary transition-colors duration-300">Coding</a>
                 <a href="#contact" class="text-lg font-medium hover:text-secondary transition-colors duration-300">Contact</a>
             </div>
@@ -70,71 +107,201 @@
         </div>
     </nav>
 
-    <!-- Mobile Menu Overlay (ATM-like) -->
+    <!-- Mobile Menu Overlay -->
     <div id="mobile-menu-overlay" class="fixed inset-0 bg-darkBg bg-opacity-95 z-40 hidden flex-col items-center justify-center space-y-8 md:hidden">
         <button id="close-mobile-menu" class="absolute top-6 right-6 text-darkText focus:outline-none">
             <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
         </button>
-        <a href="#home" class="text-4xl font-bold text-darkText hover:text-secondary transition-colors duration-300 nav-link">Home</a>
-        <a href="#about" class="text-4xl font-bold text-darkText hover:text-secondary transition-colors duration-300 nav-link">About</a>
-        <a href="#projects" class="text-4xl font-bold text-darkText hover:text-secondary transition-colors duration-300 nav-link">Projects</a>
-        <a href="#achievements" class="text-4xl font-bold text-darkText hover:text-secondary transition-colors duration-300 nav-link">Achievements</a>
-        <a href="#coding" class="text-4xl font-bold text-darkText hover:text-secondary transition-colors duration-300 nav-link">Coding</a>
-        <a href="#contact" class="text-4xl font-bold text-darkText hover:text-secondary transition-colors duration-300 nav-link">Contact</a>
+        <a href="#home" class="text-3xl font-bold text-darkText hover:text-secondary transition-colors duration-300 nav-link">Home</a>
+        <a href="#about" class="text-3xl font-bold text-darkText hover:text-secondary transition-colors duration-300 nav-link">About</a>
+        <a href="#skills" class="text-3xl font-bold text-darkText hover:text-secondary transition-colors duration-300 nav-link">Skills</a>
+        <a href="#projects" class="text-3xl font-bold text-darkText hover:text-secondary transition-colors duration-300 nav-link">Projects</a>
+        <a href="#achievements" class="text-3xl font-bold text-darkText hover:text-secondary transition-colors duration-300 nav-link">Achievements</a>
+        <a href="#education" class="text-3xl font-bold text-darkText hover:text-secondary transition-colors duration-300 nav-link">Education</a>
+        <a href="#coding" class="text-3xl font-bold text-darkText hover:text-secondary transition-colors duration-300 nav-link">Coding</a>
+        <a href="#contact" class="text-3xl font-bold text-darkText hover:text-secondary transition-colors duration-300 nav-link">Contact</a>
     </div>
 
-    <main class="pt-20"> <!-- Adjust padding-top to account for the fixed navbar -->
+    <main class="pt-20">
 
-        <!-- Home Section -->
-        <!-- Home Section -->
+        <!-- Home Section - NEW HERO DESIGN -->
         <section id="home" class="min-h-screen flex items-center justify-center section-padding bg-darkBg">
         <div class="container mx-auto px-6 flex flex-col md:flex-row items-center md:items-start text-center md:text-left gap-10">
             
             <!-- Profile Image -->
-            <div class="flex-shrink-0 relative mb-8 md:mb-0">
-            <img src="WhatsApp Image 2025-01-27 at 12.49.10.jpeg" 
-                alt="Pratik's Profile" 
-                class="rounded-full w-56 h-56 sm:w-72 sm:h-72 md:w-96 md:h-96 border-4 border-primary shadow-[0_0_60px_rgba(255,255,255,0.9)] mx-auto md:mx-0">
+            <div class="flex-shrink-0 relative">
+                <img id="profile-image" src="WhatsApp Image 2025-01-27 at 12.49.10.jpeg" 
+                    alt="Pratik's Profile" 
+                    class="rounded-full w-72 h-72 md:w-80 md:h-80 border-4 border-primary shadow-[0_0_60px_rgba(255,255,255,0.9)] mx-auto md:mx-0">
             </div>
 
-            <!-- Profile Details -->
-            <div class="text-center md:text-left max-w-3xl">
-            <h1 class="text-4xl md:text-5xl font-bold text-white">Pratik Gadhe</h1>
-            <p class="mt-2 text-lg text-yellow-400 font-semibold">
-                Building myself, one line of code at a time.
-            </p>
+            <!-- Hero Content -->
+            <div class="mt-6 md:mt-0 md:ml-12 text-center md:text-left max-w-4xl">
+                <div class="mb-4">
+                    <span class="inline-block bg-secondary text-black px-4 py-2 rounded-full text-sm font-medium mb-4">
+                        🚀 Available for Opportunities
+                    </span>
+                </div>
+                
+                <h1 class="text-5xl md:text-6xl font-bold text-white mb-4">
+                    Pratik <span class="text-secondary">Gadhe</span>
+                </h1>
+                
+                <h2 class="text-2xl md:text-3xl text-gray-300 font-light mb-6">
+                    <span id="typing-text">AI/ML Engineer</span><span id="cursor" class="animate-pulse text-secondary">|</span>
+                </h2>
+                
+                <p class="text-xl text-gray-400 mb-8 leading-relaxed">
+                    Transforming ideas into <span class="text-white font-semibold">intelligent solutions</span> through 
+                    <span class="text-secondary font-semibold">Machine Learning</span> and 
+                    <span class="text-secondary font-semibold">Data Science</span>
+                </p>
 
-            <p class="mt-4 text-gray-300">
-                I am a Computer Engineering student at <strong>SVKM’s Institute of Technology, Dhule</strong>, 
-                with a strong interest in <strong>Data Science, Machine Learning, and Artificial Intelligence</strong>. 
-                Passionate about exploring the latest AI tools and technologies, I enjoy applying my knowledge 
-                to solve real-world problems and create impactful solutions.
-            </p>
+                <!-- Quick Stats -->
+                <div class="grid grid-cols-3 gap-6 mb-8 text-center">
+                    <div class="bg-darkCard p-4 rounded-xl border border-gray-700">
+                        <div class="text-2xl font-bold text-secondary">3+</div>
+                        <div class="text-sm text-gray-400">Projects</div>
+                    </div>
+                    <div class="bg-darkCard p-4 rounded-xl border border-gray-700">
+                        <div class="text-2xl font-bold text-secondary">3</div>
+                        <div class="text-sm text-gray-400">Awards</div>
+                    </div>
+                    <div class="bg-darkCard p-4 rounded-xl border border-gray-700">
+                        <div class="text-2xl font-bold text-secondary">5+</div>
+                        <div class="text-sm text-gray-400">Technologies</div>
+                    </div>
+                </div>
 
-            <p class="mt-3 text-gray-300">
-                I have gained hands-on experience in programming languages such as 
-                <strong>C, Python, and Java</strong>, and continue to enhance my skills in software development 
-                and AI-driven applications. My current focus is on building a solid foundation in 
-                <strong>Data Science and Machine Learning</strong>, while staying curious about new technologies 
-                shaping the future.
-            </p>
-
-            <p class="mt-3 text-gray-300">
-                With a mindset of continuous learning and innovation, I aim to contribute meaningfully 
-                to the tech industry and grow as a professional in the field of AI/ML.
-            </p>
-
-            <a href="#projects" 
-                class="mt-6 inline-block bg-blue-600 hover:bg-yellow-500 text-black font-medium py-3 px-6 rounded-full transition">
-                View My Work
-            </a>
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#projects" 
+                        class="inline-flex items-center justify-center bg-primary hover:bg-secondary text-white hover:text-black font-medium py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105">
+                        <span class="mr-2">🚀</span> Explore My Work
+                    </a>
+                    <a href="#contact" 
+                        class="inline-flex items-center justify-center bg-transparent border-2 border-secondary text-secondary hover:bg-secondary hover:text-black font-medium py-4 px-8 rounded-full transition-all duration-300">
+                        <span class="mr-2">💬</span> Let's Connect
+                    </a>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="mt-8 flex justify-center md:justify-start space-x-6">
+                    <a href="resume.html" target="_blank" class="text-gray-400 hover:text-secondary transition text-sm flex items-center">
+                        <span class="mr-1">📄</span> Resume
+                    </a>
+                    <a href="https://github.com/PratikGadhe" target="_blank" class="text-gray-400 hover:text-secondary transition text-sm flex items-center">
+                        <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.909-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.828.092-.643.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.953 0-1.09.39-1.984 1.029-2.685-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.022A9.617 9.617 0 0112 6.643c.85.004 1.705.115 2.504.337 1.909-1.292 2.747-1.022 2.747-1.022.546 1.379.202 2.398.099 2.65.64.701 1.028 1.595 1.028 2.685 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.579.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/></svg> GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/pratik-gadhe-8638b7324/" target="_blank" class="text-gray-400 hover:text-secondary transition text-sm flex items-center">
+                        <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 6.4h-2.5v15h2.5v-15zm7.42 0h-2.49v15h2.49s.02-3.149 0-6.574c0-3.322 4.093-3.032 4.093 0v6.574h2.5v-7.982c0-4.47-5.438-4.135-5.438 0v-7.018z"/></svg> LinkedIn
+                    </a>
+                </div>
             </div>
         </div>
         </section>
 
 
 
-        <!-- ===== Projects Section ===== -->
+        <!-- About Section -->
+        <section id="about" class="section-padding bg-darkBg text-darkText">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-4xl font-bold text-center mb-12 text-white">👨💻 About Me</h2>
+            <div class="bg-darkCard p-8 rounded-2xl shadow-lg">
+                <p class="text-lg text-gray-300 mb-6 leading-relaxed">
+                    I'm a passionate Computer Engineering student at <strong class="text-white">SVKM's Institute of Technology, Dhule</strong>, 
+                    specializing in <strong class="text-secondary">AI/ML and Data Science</strong>. My journey in technology is driven by curiosity 
+                    and a desire to solve real-world problems through innovative solutions.
+                </p>
+                <p class="text-lg text-gray-300 mb-6 leading-relaxed">
+                    Currently focused on building expertise in <strong class="text-white">Machine Learning, Artificial Intelligence, 
+                    and Data Analytics</strong>. I enjoy exploring cutting-edge AI tools and applying them to create meaningful impact.
+                </p>
+                <div class="grid md:grid-cols-2 gap-6 mt-8">
+                    <div>
+                        <h3 class="text-xl font-semibold text-white mb-3">🎯 Career Goals</h3>
+                        <p class="text-gray-400">Aspiring to become an AI/ML Engineer, contributing to innovative solutions in healthcare, sustainability, and education.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-white mb-3">💡 What Drives Me</h3>
+                        <p class="text-gray-400">Continuous learning, problem-solving, and the potential of AI to transform industries and improve lives.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section-padding bg-darkCard text-darkText">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 text-white">🛠️ Skills & Technologies</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- Programming Languages -->
+                <div class="bg-darkBg p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-semibold text-white mb-4 flex items-center">
+                        <span class="text-2xl mr-2">💻</span> Programming
+                    </h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-300">Python</span>
+                            <div class="w-24 bg-gray-700 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-300">Java</span>
+                            <div class="w-24 bg-gray-700 rounded-full h-2">
+                                <div class="bg-red-500 h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-300">C</span>
+                            <div class="w-24 bg-gray-700 rounded-full h-2">
+                                <div class="bg-green-500 h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-300">HTML/CSS</span>
+                            <div class="w-24 bg-gray-700 rounded-full h-2">
+                                <div class="bg-orange-500 h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI/ML & Tools -->
+                <div class="bg-darkBg p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-semibold text-white mb-4 flex items-center">
+                        <span class="text-2xl mr-2">🤖</span> AI/ML & Tools
+                    </h3>
+                    <div class="space-y-2">
+                        <span class="inline-block bg-blue-600 text-white px-3 py-1 rounded-full text-sm">Machine Learning</span>
+                        <span class="inline-block bg-green-600 text-white px-3 py-1 rounded-full text-sm">Data Science</span>
+                        <span class="inline-block bg-purple-600 text-white px-3 py-1 rounded-full text-sm">OpenCV</span>
+                        <span class="inline-block bg-yellow-600 text-white px-3 py-1 rounded-full text-sm">Tkinter</span>
+                        <span class="inline-block bg-red-600 text-white px-3 py-1 rounded-full text-sm">SQLite</span>
+                        <span class="inline-block bg-indigo-600 text-white px-3 py-1 rounded-full text-sm">Git</span>
+                    </div>
+                </div>
+
+                <!-- Frameworks & Others -->
+                <div class="bg-darkBg p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-semibold text-white mb-4 flex items-center">
+                        <span class="text-2xl mr-2">⚡</span> Frameworks
+                    </h3>
+                    <div class="space-y-2">
+                        <span class="inline-block bg-cyan-600 text-white px-3 py-1 rounded-full text-sm">Tailwind CSS</span>
+                        <span class="inline-block bg-orange-600 text-white px-3 py-1 rounded-full text-sm">JavaScript</span>
+                        <span class="inline-block bg-gray-600 text-white px-3 py-1 rounded-full text-sm">GitHub</span>
+                        <span class="inline-block bg-pink-600 text-white px-3 py-1 rounded-full text-sm">Problem Solving</span>
+                        <span class="inline-block bg-teal-600 text-white px-3 py-1 rounded-full text-sm">Research</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+
         <!-- Projects Section -->
         <section id="projects" class="section-padding bg-darkCard text-darkText">
         <div class="container mx-auto px-6">
@@ -147,11 +314,19 @@
                 <span class="text-4xl text-secondary mr-4">🤖</span>
                 <h3 class="text-2xl font-semibold">AI Learning Platform</h3>
                 </div>
-                <p class="text-gray-400">
+                <p class="text-gray-400 mb-4">
                 A personalized AI-based teaching platform with interactive lessons, 
                 visual + audio integration, and adaptive learning paths.
                 </p>
-                <a href="#" class="text-gray-500 italic cursor-not-allowed mt-4 inline-block">Coming Soon</a>
+                <div class="mb-4">
+                    <h4 class="text-sm font-semibold text-white mb-2">Tech Stack:</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-600 text-white px-2 py-1 rounded text-xs">Python</span>
+                        <span class="bg-green-600 text-white px-2 py-1 rounded text-xs">AI/ML</span>
+                        <span class="bg-purple-600 text-white px-2 py-1 rounded text-xs">NLP</span>
+                    </div>
+                </div>
+                <a href="#" class="text-gray-500 italic cursor-not-allowed mt-4 inline-block">🕒 Coming Soon</a>
             </div>
 
             <!-- Project Card 2 -->
@@ -160,12 +335,25 @@
                 <span class="text-4xl text-secondary mr-4">♻️</span>
                 <h3 class="text-2xl font-semibold">Smart Recycling Machine</h3>
                 </div>
-                <p class="text-gray-400">
-                A prototype machine that scans plastic bottles, crushes them, 
-                and rewards users with cashback incentives.
+                <p class="text-gray-400 mb-4">
+                IoT-enabled recycling system with computer vision for bottle detection, 
+                automated crushing, and blockchain-based reward system.
                 </p>
-                <a href="https://github.com/PratikGadhe/Major-Project-" 
-                class="text-blue-400 hover:underline mt-4 inline-block">View Project →</a>
+                <div class="mb-4">
+                    <h4 class="text-sm font-semibold text-white mb-2">Tech Stack:</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-600 text-white px-2 py-1 rounded text-xs">Python</span>
+                        <span class="bg-purple-600 text-white px-2 py-1 rounded text-xs">OpenCV</span>
+                        <span class="bg-yellow-600 text-white px-2 py-1 rounded text-xs">Tkinter</span>
+                        <span class="bg-red-600 text-white px-2 py-1 rounded text-xs">SQLite</span>
+                    </div>
+                </div>
+                <div class="flex gap-2">
+                    <a href="https://github.com/PratikGadhe/Major-Project-" 
+                    class="text-blue-400 hover:underline text-sm">🔗 GitHub</a>
+                    <span class="text-gray-500">|</span>
+                    <span class="text-green-400 text-sm">🏆 Award Winner</span>
+                </div>
             </div>
 
             <!-- Project Card 3 -->
@@ -174,21 +362,31 @@
                 <span class="text-4xl text-secondary mr-4">💻</span>
                 <h3 class="text-2xl font-semibold">Portfolio Website</h3>
                 </div>
-                <p class="text-gray-400">
-                A modern personal portfolio built with HTML, CSS, Tailwind, 
-                and JavaScript for showcasing projects and skills.
+                <p class="text-gray-400 mb-4">
+                Responsive personal portfolio with dark theme, smooth animations, 
+                typing effects, and professional sections for showcasing work.
                 </p>
-                <a href="https://github.com/PratikGadhe/CodeTrail-By-Pratik" 
-                class="text-blue-400 hover:underline mt-4 inline-block">View Project →</a>
+                <div class="mb-4">
+                    <h4 class="text-sm font-semibold text-white mb-2">Tech Stack:</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-orange-600 text-white px-2 py-1 rounded text-xs">HTML5</span>
+                        <span class="bg-cyan-600 text-white px-2 py-1 rounded text-xs">Tailwind</span>
+                        <span class="bg-yellow-600 text-white px-2 py-1 rounded text-xs">JavaScript</span>
+                    </div>
+                </div>
+                <div class="flex gap-2">
+                    <a href="https://github.com/PratikGadhe/CodeTrail-By-Pratik" 
+                    class="text-blue-400 hover:underline text-sm">🔗 GitHub</a>
+                    <span class="text-gray-500">|</span>
+                    <a href="https://pratikgadhe.github.io/CodeTrail-By-Pratik/" 
+                    class="text-green-400 hover:underline text-sm">🌐 Live Demo</a>
+                </div>
             </div>
 
             </div>
         </div>
         </section>
 
-
-
-        <!-- Achievements Section -->
         <!-- Achievements Section -->
         <section id="achievements" class="section-padding bg-darkCard text-darkText">
         <div class="container mx-auto px-6">
@@ -218,7 +416,7 @@
                 <h3 class="text-2xl font-semibold">TechnoCave 2025 Runner-Up</h3>
                 </div>
                 <p class="text-gray-400 mb-4">
-                Team <strong>EcoWorrier</strong> secured <strong>Runner-Up</strong> in the National-Level Mega Computing Event TechnoCave 2025, hosted at SVKM’s IOT.
+                Team <strong>EcoWorrier</strong> secured <strong>Runner-Up</strong> in the National-Level Mega Computing Event TechnoCave 2025, hosted at SVKM's IOT.
                 </p>
                 <div class="flex gap-4">
                 <a href="Avishkar_Runnerup_Pratik_Gadhe.png" class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-blue-700 transition">View Certificate</a>
@@ -234,7 +432,7 @@
                 </div>
                 <p class="text-gray-400 mb-4">
                 Won <strong>2nd Position</strong> in Model Presentation at <strong>Techverse 2025</strong>.  
-                Project: “Incentivized Plastic Recycling Machine”. Awarded Silver Medal, Certificate & ₹3000.
+                Project: "Incentivized Plastic Recycling Machine". Awarded Silver Medal, Certificate & ₹3000.
                 </p>
                 <div class="flex gap-4">
                 <a href="TechVerse Runner-Up 2025.pdf" class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-blue-700 transition">View Certificate</a>
@@ -246,9 +444,34 @@
         </div>
         </section>
 
+        <!-- Education Section -->
+        <section id="education" class="section-padding bg-darkBg text-darkText">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-4xl font-bold text-center mb-12 text-white">🎓 Education</h2>
+            <div class="bg-darkCard p-8 rounded-2xl shadow-lg border-l-4 border-primary">
+                <div class="flex items-start space-x-4">
+                    <div class="text-4xl text-primary">🏦</div>
+                    <div class="flex-1">
+                        <h3 class="text-2xl font-semibold text-white">Bachelor of Engineering - Computer Engineering</h3>
+                        <p class="text-secondary font-medium text-lg">SVKM's Institute of Technology, Dhule</p>
+                        <p class="text-gray-400 mt-2">2022 - 2026 (Expected)</p>
+                        <div class="mt-4">
+                            <h4 class="text-lg font-medium text-white mb-2">Relevant Coursework:</h4>
+                            <div class="grid md:grid-cols-2 gap-2">
+                                <span class="text-gray-300">• Data Structures & Algorithms</span>
+                                <span class="text-gray-300">• Machine Learning</span>
+                                <span class="text-gray-300">• Database Management Systems</span>
+                                <span class="text-gray-300">• Artificial Intelligence</span>
+                                <span class="text-gray-300">• Software Engineering</span>
+                                <span class="text-gray-300">• Computer Networks</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
 
-
-        <!-- Coding Progress Section (Simple MVP Streak Display) -->
         <!-- Coding Section -->
         <section id="coding" class="section-padding bg-darkBg text-darkText">
         <div class="container mx-auto px-6 max-w-5xl">
@@ -299,32 +522,202 @@
         </div>
         </section>
 
-
-        <!-- Contact Section (Footer) -->
-        <footer id="contact" class="bg-darkCard text-darkText py-12">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl font-bold mb-8 text-primary">Get In Touch</h2>
-                <div class="flex justify-center space-x-8 mb-8">
-                    <a href="mailto:pratikgadhe366@gmail.com" class="text-darkText hover:text-secondary transition-colors duration-300" target="_blank">
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
-                        <span class="sr-only">Email</span>
-                    </a>
-                    <a href="https://www.linkedin.com/in/pratik-gadhe-8638b7324/" class="text-darkText hover:text-secondary transition-colors duration-300" target="_blank">
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 6.4h-2.5v15h2.5v-15zm7.42 0h-2.49v15h2.49s.02-3.149 0-6.574c0-3.322 4.093-3.032 4.093 0v6.574h2.5v-7.982c0-4.47-5.438-4.135-5.438 0v-7.018z"/></svg>
-                        <span class="sr-only">LinkedIn</span>
-                    </a>
-                    <a href="https://github.com/PratikGadhe" class="text-darkText hover:text-secondary transition-colors duration-300" target="_blank">
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.909-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.828.092-.643.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.953 0-1.09.39-1.984 1.029-2.685-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.022A9.617 9.617 0 0112 6.643c.85.004 1.705.115 2.504.337 1.909-1.292 2.747-1.022 2.747-1.022.546 1.379.202 2.398.099 2.65.64.701 1.028 1.595 1.028 2.685 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.579.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/></svg>
-                        <span class="sr-only">GitHub</span>
-                    </a>
+        <!-- Contact Section -->
+        <section id="contact" class="section-padding bg-darkCard text-darkText">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-4xl font-bold text-center mb-12 text-white">📬 Get In Touch</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-2xl font-semibold text-white mb-6">Let's Connect!</h3>
+                    <p class="text-gray-300 mb-8 leading-relaxed">
+                        I'm always excited to discuss new opportunities, collaborate on projects, 
+                        or simply chat about AI/ML and technology. Feel free to reach out!
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+                            </div>
+                            <div>
+                                <p class="text-white font-medium">Email</p>
+                                <a href="mailto:pratikgadhe366@gmail.com" class="text-secondary hover:underline">pratikgadhe366@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 6.4h-2.5v15h2.5v-15zm7.42 0h-2.49v15h2.49s.02-3.149 0-6.574c0-3.322 4.093-3.032 4.093 0v6.574h2.5v-7.982c0-4.47-5.438-4.135-5.438 0v-7.018z"/></svg>
+                            </div>
+                            <div>
+                                <p class="text-white font-medium">LinkedIn</p>
+                                <a href="https://www.linkedin.com/in/pratik-gadhe-8638b7324/" target="_blank" class="text-secondary hover:underline">Connect with me</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.909-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.828.092-.643.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.953 0-1.09.39-1.984 1.029-2.685-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.022A9.617 9.617 0 0112 6.643c.85.004 1.705.115 2.504.337 1.909-1.292 2.747-1.022 2.747-1.022.546 1.379.202 2.398.099 2.65.64.701 1.028 1.595 1.028 2.685 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.579.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/></svg>
+                            </div>
+                            <div>
+                                <p class="text-white font-medium">GitHub</p>
+                                <a href="https://github.com/PratikGadhe" target="_blank" class="text-secondary hover:underline">View my repositories</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                
+                <!-- Contact Form -->
+                <div class="bg-darkBg p-8 rounded-2xl shadow-lg">
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-white font-medium mb-2">Name</label>
+                            <input type="text" id="name" name="name" required 
+                                class="w-full px-4 py-3 bg-darkCard border border-gray-600 rounded-lg text-white focus:border-primary focus:outline-none transition">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-white font-medium mb-2">Email</label>
+                            <input type="email" id="email" name="email" required 
+                                class="w-full px-4 py-3 bg-darkCard border border-gray-600 rounded-lg text-white focus:border-primary focus:outline-none transition">
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block text-white font-medium mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject" required 
+                                class="w-full px-4 py-3 bg-darkCard border border-gray-600 rounded-lg text-white focus:border-primary focus:outline-none transition">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-white font-medium mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" required 
+                                class="w-full px-4 py-3 bg-darkCard border border-gray-600 rounded-lg text-white focus:border-primary focus:outline-none transition resize-none"></textarea>
+                        </div>
+                        
+                        <button type="submit" 
+                            class="w-full bg-primary hover:bg-secondary text-white hover:text-black font-medium py-3 px-6 rounded-lg transition">
+                            Send Message 🚀
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer class="bg-darkBg text-darkText py-8 border-t border-gray-700">
+            <div class="container mx-auto px-6 text-center">
                 <p class="text-gray-500 text-sm">&copy; <span id="current-year"></span> CodeTrail by Pratik. All rights reserved.</p>
+                <p class="text-gray-600 text-xs mt-2">Built with ❤️ using HTML, Tailwind CSS & JavaScript</p>
             </div>
         </footer>
     </main>
 
     <script>
-        // Mobile Menu Toggle Logic
+        // Admin Photo Editor System - FIXED
+        const ADMIN_PASSWORD = "pratik2025";
+
+        // Check for saved photo on page load
+        window.addEventListener('load', () => {
+            const savedPhoto = localStorage.getItem('profilePhoto');
+            if (savedPhoto) {
+                document.getElementById('profile-image').src = savedPhoto;
+            }
+        });
+
+        // Function called when edit button is clicked
+        function requestAdminAccess() {
+            // Check if already logged in
+            if (sessionStorage.getItem('adminAccess') === 'true') {
+                openPhotoEditor();
+            } else {
+                // Show login modal
+                document.getElementById('admin-login-modal').style.display = 'flex';
+            }
+        }
+
+        function checkAdminPassword() {
+            const password = document.getElementById('admin-password').value;
+            if (password === ADMIN_PASSWORD) {
+                sessionStorage.setItem('adminAccess', 'true');
+                closeAdminLogin();
+                openPhotoEditor(); // Directly open photo editor after successful login
+            } else {
+                alert('Incorrect password!');
+            }
+        }
+
+        function closeAdminLogin() {
+            document.getElementById('admin-login-modal').style.display = 'none';
+            document.getElementById('admin-password').value = '';
+        }
+
+        function openPhotoEditor() {
+            document.getElementById('photo-editor-modal').style.display = 'flex';
+        }
+
+        function closePhotoEditor() {
+            document.getElementById('photo-editor-modal').style.display = 'none';
+            document.getElementById('photo-input').value = '';
+        }
+
+        function updatePhoto() {
+            const fileInput = document.getElementById('photo-input');
+            const file = fileInput.files[0];
+            
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('profile-image').src = e.target.result;
+                    localStorage.setItem('profilePhoto', e.target.result);
+                    closePhotoEditor();
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        // Typing Animation
+        const texts = [
+            "AI/ML Engineer",
+            "Data Science Enthusiast", 
+            "Problem Solver",
+            "Innovation Creator"
+        ];
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typingElement = document.getElementById('typing-text');
+
+        function typeText() {
+            const currentText = texts[textIndex];
+            
+            if (isDeleting) {
+                typingElement.textContent = currentText.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typingElement.textContent = currentText.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            let typeSpeed = isDeleting ? 50 : 100;
+
+            if (!isDeleting && charIndex === currentText.length) {
+                typeSpeed = 2000;
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                textIndex = (textIndex + 1) % texts.length;
+                typeSpeed = 500;
+            }
+
+            setTimeout(typeText, typeSpeed);
+        }
+
+        setTimeout(typeText, 1000);
+
+        // Mobile Menu Toggle
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const closeMobileMenuButton = document.getElementById('close-mobile-menu');
         const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
@@ -332,15 +725,14 @@
 
         mobileMenuButton.addEventListener('click', () => {
             mobileMenuOverlay.classList.remove('hidden');
-            document.body.style.overflow = 'hidden'; // Prevent scrolling when overlay is open
+            document.body.style.overflow = 'hidden';
         });
 
         closeMobileMenuButton.addEventListener('click', () => {
             mobileMenuOverlay.classList.add('hidden');
-            document.body.style.overflow = ''; // Re-enable scrolling
+            document.body.style.overflow = '';
         });
 
-        // Close mobile menu when a navigation link is clicked
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenuOverlay.classList.add('hidden');
@@ -351,11 +743,61 @@
         // Set current year in footer
         document.getElementById('current-year').textContent = new Date().getFullYear();
 
+        // Contact Form Handling
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const subject = formData.get('subject');
+            const message = formData.get('message');
+            
+            const mailtoLink = `mailto:pratikgadhe366@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+            
+            window.location.href = mailtoLink;
+            
+            const button = this.querySelector('button[type="submit"]');
+            const originalText = button.textContent;
+            button.textContent = '✓ Message Sent!';
+            button.style.backgroundColor = '#10B981';
+            
+            setTimeout(() => {
+                button.textContent = originalText;
+                button.style.backgroundColor = '';
+                this.reset();
+            }, 3000);
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(30px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+
+        document.getElementById('home').style.opacity = '1';
+        document.getElementById('home').style.transform = 'translateY(0)';
+
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                // Close mobile menu if open
                 if (!mobileMenuOverlay.classList.contains('hidden')) {
                     mobileMenuOverlay.classList.add('hidden');
                     document.body.style.overflow = '';
